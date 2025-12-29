@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 100 Most Common Spanish Words - Essential Vocabulary</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --terracotta: #C86B3C;
+            --golden: #F4A460;
+            --deep-blue: #1B4965;
+            --sky-blue: #62B6CB;
+            --cream: #FFF8F0;
+            --dark: #2C1810;
+            --accent-red: #D84A4A;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Source Sans 3', sans-serif;
+            background: linear-gradient(135deg, var(--cream) 0%, #FFE8D6 100%);
+            min-height: 100vh;
+            color: var(--dark);
+        }
+        
+        /* Sticky Header */
+        header {
+            background: linear-gradient(135deg, var(--deep-blue), var(--sky-blue));
+            padding: 30px 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            animation: slideDown 0.6s ease-out;
+        }
+        
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.8rem, 4vw, 3rem);
+            color: white;
+            font-weight: 900;
+            letter-spacing: -1px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 12px 28px;
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .nav-link:hover {
+            background: white;
+            color: var(--deep-blue);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Main Content */
+        .container {
+            max-width: 1400px;
+            margin: 40px auto;
+            padding: 0 20px 60px;
+        }
+        
+        .intro-box {
+            background: linear-gradient(135deg, var(--terracotta), var(--golden));
+            color: white;
+            padding: 40px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 40px rgba(200, 107, 60, 0.3);
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .intro-box h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.5rem, 3vw, 2.2rem);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .intro-box p {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            line-height: 1.7;
+        }
+        
+        /* Table Styles */
+        .table-container {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            overflow-x: auto;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+        
+        thead {
+            background: linear-gradient(135deg, var(--deep-blue), var(--sky-blue));
+            color: white;
+        }
+        
+        th {
+            padding: 20px 15px;
+            text-align: left;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            position: sticky;
+            top: 110px;
+            background: linear-gradient(135deg, var(--deep-blue), var(--sky-blue));
+            z-index: 10;
+        }
+        
+        th:first-child {
+            border-top-left-radius: 15px;
+        }
+        
+        th:last-child {
+            border-top-right-radius: 15px;
+        }
+        
+        tbody tr {
+            transition: all 0.3s ease;
+            animation: fadeIn 0.5s ease-out both;
+        }
+        
+        tbody tr:nth-child(1) { animation-delay: 0.5s; }
+        tbody tr:nth-child(2) { animation-delay: 0.52s; }
+        tbody tr:nth-child(3) { animation-delay: 0.54s; }
+        tbody tr:nth-child(4) { animation-delay: 0.56s; }
+        tbody tr:nth-child(5) { animation-delay: 0.58s; }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        tbody tr:hover {
+            background: linear-gradient(90deg, #FFF8F0, #FFE8D6);
+            transform: scale(1.01);
+            box-shadow: 0 4px 15px rgba(200, 107, 60, 0.15);
+        }
+        
+        td {
+            padding: 18px 15px;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        
+        td:first-child {
+            font-weight: 700;
+            color: var(--deep-blue);
+            font-size: 1.1rem;
+        }
+        
+        td:nth-child(2) {
+            font-weight: 600;
+            color: var(--terracotta);
+            font-size: 1.1rem;
+        }
+        
+        .highlight {
+            background: linear-gradient(120deg, var(--golden) 0%, var(--golden) 100%);
+            background-size: 100% 40%;
+            background-repeat: no-repeat;
+            background-position: 0 85%;
+            padding: 2px 4px;
+            font-weight: 700;
+            color: var(--dark);
+        }
+        
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            th, td {
+                padding: 15px 12px;
+                font-size: 0.95rem;
+            }
+            
+            th {
+                font-size: 1.1rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                justify-content: center;
+                text-align: center;
+            }
+            
+            .nav-links {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .table-container {
+                padding: 15px;
+            }
+            
+            th, td {
+                padding: 12px 8px;
+                font-size: 0.9rem;
+            }
+            
+            th {
+                font-size: 1rem;
+                top: 140px;
+            }
+            
+            .intro-box {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Top 100 Most Common Spanish Words</h1>
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">🏠 Home</a>
+                <a href="top-1000-page1.html" class="nav-link">→ Top 1000</a>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="intro-box">
+            <h2>🎯 Your Foundation in Spanish</h2>
+            <p>These 100 words are the building blocks of Spanish. Master them and you'll understand a significant portion of everyday conversations!</p>
+        </div>
+        
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Spanish</th>
+                        <th>English</th>
+                        <th>Spanish Example</th>
+                        <th>English Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>de</td>
+                        <td>of/from</td>
+                        <td>El libro <span class="highlight">de</span> María.</td>
+                        <td>The book <span class="highlight">of</span> María.</td>
+                    </tr>
+                    <tr>
+                        <td>la</td>
+                        <td>the (feminine)</td>
+                        <td>Me gusta <span class="highlight">la</span> música.</td>
+                        <td>I like <span class="highlight">the</span> music.</td>
+                    </tr>
+                    <tr>
+                        <td>que</td>
+                        <td>that/which</td>
+                        <td>Espero <span class="highlight">que</span> estés bien.</td>
+                        <td>I hope <span class="highlight">that</span> you're well.</td>
+                    </tr>
+                    <tr>
+                        <td>el</td>
+                        <td>the (masculine)</td>
+                        <td><span class="highlight">El</span> perro está aquí.</td>
+                        <td><span class="highlight">The</span> dog is here.</td>
+                    </tr>
+                    <tr>
+                        <td>en</td>
+                        <td>in/on/at</td>
+                        <td>Estoy <span class="highlight">en</span> casa.</td>
+                        <td>I'm <span class="highlight">at</span> home.</td>
+                    </tr>
+                    <tr>
+                        <td>y</td>
+                        <td>and</td>
+                        <td>Pan <span class="highlight">y</span> mantequilla.</td>
+                        <td>Bread <span class="highlight">and</span> butter.</td>
+                    </tr>
+                    <tr>
+                        <td>a</td>
+                        <td>to/at</td>
+                        <td>Voy <span class="highlight">a</span> la escuela.</td>
+                        <td>I'm going <span class="highlight">to</span> school.</td>
+                    </tr>
+                    <tr>
+                        <td>los</td>
+                        <td>the (masculine plural)</td>
+                        <td><span class="highlight">Los</span> niños juegan.</td>
+                        <td><span class="highlight">The</span> children play.</td>
+                    </tr>
+                    <tr>
+                        <td>se</td>
+                        <td>himself/herself/itself</td>
+                        <td>Él <span class="highlight">se</span> llama Juan.</td>
+                        <td>He calls <span class="highlight">himself</span> Juan.</td>
+                    </tr>
+                    <tr>
+                        <td>del</td>
+                        <td>of the/from the</td>
+                        <td>El coche <span class="highlight">del</span> vecino.</td>
+                        <td>The car <span class="highlight">of the</span> neighbor.</td>
+                    </tr>
+                    <tr>
+                        <td>las</td>
+                        <td>the (feminine plural)</td>
+                        <td><span class="highlight">Las</span> flores son bonitas.</td>
+                        <td><span class="highlight">The</span> flowers are pretty.</td>
+                    </tr>
+                    <tr>
+                        <td>un</td>
+                        <td>a/an (masculine)</td>
+                        <td>Tengo <span class="highlight">un</span> gato.</td>
+                        <td>I have <span class="highlight">a</span> cat.</td>
+                    </tr>
+                    <tr>
+                        <td>por</td>
+                        <td>for/by/through</td>
+                        <td>Gracias <span class="highlight">por</span> todo.</td>
+                        <td>Thanks <span class="highlight">for</span> everything.</td>
+                    </tr>
+                    <tr>
+                        <td>con</td>
+                        <td>with</td>
+                        <td>Café <span class="highlight">con</span> leche.</td>
+                        <td>Coffee <span class="highlight">with</span> milk.</td>
+                    </tr>
+                    <tr>
+                        <td>no</td>
+                        <td>no/not</td>
+                        <td><span class="highlight">No</span> tengo tiempo.</td>
+                        <td>I <span class="highlight">don't</span> have time.</td>
+                    </tr>
+                    <tr>
+                        <td>una</td>
+                        <td>a/an (feminine)</td>
+                        <td>Quiero <span class="highlight">una</span> manzana.</td>
+                        <td>I want <span class="highlight">an</span> apple.</td>
+                    </tr>
+                    <tr>
+                        <td>para</td>
+                        <td>for/to</td>
+                        <td>Este regalo es <span class="highlight">para</span> ti.</td>
+                        <td>This gift is <span class="highlight">for</span> you.</td>
+                    </tr>
+                    <tr>
+                        <td>es</td>
+                        <td>is/he is/she is</td>
+                        <td>Él <span class="highlight">es</span> mi amigo.</td>
+                        <td>He <span class="highlight">is</span> my friend.</td>
+                    </tr>
+                    <tr>
+                        <td>al</td>
+                        <td>to the (a+el)</td>
+                        <td>Voy <span class="highlight">al</span> mercado.</td>
+                        <td>I'm going <span class="highlight">to the</span> market.</td>
+                    </tr>
+                    <tr>
+                        <td>lo</td>
+                        <td>it/him</td>
+                        <td><span class="highlight">Lo</span> vi ayer.</td>
+                        <td>I saw <span class="highlight">him</span> yesterday.</td>
+                    </tr>
+                    <tr>
+                        <td>como</td>
+                        <td>like/as/how</td>
+                        <td>Canto <span class="highlight">como</span> un pájaro.</td>
+                        <td>I sing <span class="highlight">like</span> a bird.</td>
+                    </tr>
+                    <tr>
+                        <td>más</td>
+                        <td>more</td>
+                        <td>Quiero <span class="highlight">más</span> agua.</td>
+                        <td>I want <span class="highlight">more</span> water.</td>
+                    </tr>
+                    <tr>
+                        <td>pero</td>
+                        <td>but</td>
+                        <td>Es caro, <span class="highlight">pero</span> bueno.</td>
+                        <td>It's expensive, <span class="highlight">but</span> good.</td>
+                    </tr>
+                    <tr>
+                        <td>su</td>
+                        <td>his/her/their/your</td>
+                        <td>Es <span class="highlight">su</span> casa.</td>
+                        <td>It's <span class="highlight">his</span> house.</td>
+                    </tr>
+                    <tr>
+                        <td>me</td>
+                        <td>me</td>
+                        <td><span class="highlight">Me</span> gusta bailar.</td>
+                        <td>I like to dance.</td>
+                    </tr>
+                    <tr>
+                        <td>si</td>
+                        <td>if</td>
+                        <td><span class="highlight">Si</span> llueve, me quedo.</td>
+                        <td><span class="highlight">If</span> it rains, I stay.</td>
+                    </tr>
+                    <tr>
+                        <td>ya</td>
+                        <td>already/now</td>
+                        <td><span class="highlight">Ya</span> terminé.</td>
+                        <td>I <span class="highlight">already</span> finished.</td>
+                    </tr>
+                    <tr>
+                        <td>todo</td>
+                        <td>all/everything</td>
+                        <td>Comí <span class="highlight">todo</span>.</td>
+                        <td>I ate <span class="highlight">everything</span>.</td>
+                    </tr>
+                    <tr>
+                        <td>o</td>
+                        <td>or</td>
+                        <td>¿Té <span class="highlight">o</span> café?</td>
+                        <td>Tea <span class="highlight">or</span> coffee?</td>
+                    </tr>
+                    <tr>
+                        <td>está</td>
+                        <td>is/he is/she is (location/condition)</td>
+                        <td>Ella <span class="highlight">está</span> feliz.</td>
+                        <td>She <span class="highlight">is</span> happy.</td>
+                    </tr>
+                    <tr>
+                        <td>hay</td>
+                        <td>there is/there are</td>
+                        <td><span class="highlight">Hay</span> un problema.</td>
+                        <td><span class="highlight">There is</span> a problem.</td>
+                    </tr>
+                    <tr>
+                        <td>muy</td>
+                        <td>very</td>
+                        <td>Es <span class="highlight">muy</span> bonito.</td>
+                        <td>It's <span class="highlight">very</span> pretty.</td>
+                    </tr>
+                    <tr>
+                        <td>bien</td>
+                        <td>well/good</td>
+                        <td>Estoy <span class="highlight">bien</span>, gracias.</td>
+                        <td>I'm <span class="highlight">well</span>, thanks.</td>
+                    </tr>
+                    <tr>
+                        <td>ser</td>
+                        <td>to be (permanent)</td>
+                        <td>Quiero <span class="highlight">ser</span> doctor.</td>
+                        <td>I want <span class="highlight">to be</span> a doctor.</td>
+                    </tr>
+                    <tr>
+                        <td>hacer</td>
+                        <td>to do/to make</td>
+                        <td>¿Qué vas a <span class="highlight">hacer</span>?</td>
+                        <td>What are you going <span class="highlight">to do</span>?</td>
+                    </tr>
+                    <tr>
+                        <td>así</td>
+                        <td>like this/thus</td>
+                        <td>Hazlo <span class="highlight">así</span>.</td>
+                        <td>Do it <span class="highlight">like this</span>.</td>
+                    </tr>
+                    <tr>
+                        <td>fue</td>
+                        <td>was/went</td>
+                        <td>Ella <span class="highlight">fue</span> al cine.</td>
+                        <td>She <span class="highlight">went</span> to the cinema.</td>
+                    </tr>
+                    <tr>
+                        <td>le</td>
+                        <td>to him/to her/to you</td>
+                        <td><span class="highlight">Le</span> di el libro.</td>
+                        <td>I gave the book <span class="highlight">to him</span>.</td>
+                    </tr>
+                    <tr>
+                        <td>ha</td>
+                        <td>has</td>
+                        <td>Él <span class="highlight">ha</span> comido.</td>
+                        <td>He <span class="highlight">has</span> eaten.</td>
+                    </tr>
+                    <tr>
+                        <td>este</td>
+                        <td>this (masculine)</td>
+                        <td><span class="highlight">Este</span> libro es bueno.</td>
+                        <td><span class="highlight">This</span> book is good.</td>
+                    </tr>
+                    <tr>
+                        <td>estar</td>
+                        <td>to be (temporary)</td>
+                        <td>Voy a <span class="highlight">estar</span> en casa.</td>
+                        <td>I'm going <span class="highlight">to be</span> at home.</td>
+                    </tr>
+                    <tr>
+                        <td>son</td>
+                        <td>are/they are</td>
+                        <td>Ellos <span class="highlight">son</span> estudiantes.</td>
+                        <td>They <span class="highlight">are</span> students.</td>
+                    </tr>
+                    <tr>
+                        <td>cuando</td>
+                        <td>when</td>
+                        <td>Avísame <span class="highlight">cuando</span> llegues.</td>
+                        <td>Tell me <span class="highlight">when</span> you arrive.</td>
+                    </tr>
+                    <tr>
+                        <td>también</td>
+                        <td>also/too</td>
+                        <td>Yo <span class="highlight">también</span> quiero ir.</td>
+                        <td>I <span class="highlight">also</span> want to go.</td>
+                    </tr>
+                    <tr>
+                        <td>te</td>
+                        <td>you/to you</td>
+                        <td><span class="highlight">Te</span> quiero mucho.</td>
+                        <td>I love <span class="highlight">you</span> very much.</td>
+                    </tr>
+                    <tr>
+                        <td>puede</td>
+                        <td>can/he can/she can</td>
+                        <td>Él <span class="highlight">puede</span> ayudarte.</td>
+                        <td>He <span class="highlight">can</span> help you.</td>
+                    </tr>
+                    <tr>
+                        <td>tienen</td>
+                        <td>have/they have</td>
+                        <td>Ellos <span class="highlight">tienen</span> un perro.</td>
+                        <td>They <span class="highlight">have</span> a dog.</td>
+                    </tr>
+                    <tr>
+                        <td>este</td>
+                        <td>this</td>
+                        <td><span class="highlight">Este</span> es mi hermano.</td>
+                        <td><span class="highlight">This</span> is my brother.</td>
+                    </tr>
+                    <tr>
+                        <td>soy</td>
+                        <td>I am</td>
+                        <td><span class="highlight">Soy</span> de España.</td>
+                        <td><span class="highlight">I am</span> from Spain.</td>
+                    </tr>
+                    <tr>
+                        <td>poder</td>
+                        <td>to be able to/can</td>
+                        <td>Quiero <span class="highlight">poder</span> hablar español.</td>
+                        <td>I want <span class="highlight">to be able to</span> speak Spanish.</td>
+                    </tr>
+                    <tr>
+                        <td>tener</td>
+                        <td>to have</td>
+                        <td>Necesito <span class="highlight">tener</span> paciencia.</td>
+                        <td>I need <span class="highlight">to have</span> patience.</td>
+                    </tr>
+                    <tr>
+                        <td>ahora</td>
+                        <td>now</td>
+                        <td>Tengo que irme <span class="highlight">ahora</span>.</td>
+                        <td>I have to leave <span class="highlight">now</span>.</td>
+                    </tr>
+                    <tr>
+                        <td>tiempo</td>
+                        <td>time</td>
+                        <td>No tengo <span class="highlight">tiempo</span>.</td>
+                        <td>I don't have <span class="highlight">time</span>.</td>
+                    </tr>
+                    <tr>
+                        <td>día</td>
+                        <td>day</td>
+                        <td>¡Que tengas un buen <span class="highlight">día</span>!</td>
+                        <td>Have a good <span class="highlight">day</span>!</td>
+                    </tr>
+                    <tr>
+                        <td>él</td>
+                        <td>he</td>
+                        <td><span class="highlight">Él</span> es mi amigo.</td>
+                        <td><span class="highlight">He</span> is my friend.</td>
+                    </tr>
+                    <tr>
+                        <td>ella</td>
+                        <td>she</td>
+                        <td><span class="highlight">Ella</span> es inteligente.</td>
+                        <td><span class="highlight">She</span> is intelligent.</td>
+                    </tr>
+                    <tr>
+                        <td>pues</td>
+                        <td>well/then</td>
+                        <td><span class="highlight">Pues</span>, no sé qué hacer.</td>
+                        <td><span class="highlight">Well</span>, I don't know what to do.</td>
+                    </tr>
+                    <tr>
+                        <td>aquí</td>
+                        <td>here</td>
+                        <td>Ven <span class="highlight">aquí</span>.</td>
+                        <td>Come <span class="highlight">here</span>.</td>
+                    </tr>
+                    <tr>
+                        <td>donde</td>
+                        <td>where</td>
+                        <td>¿<span class="highlight">Dónde</span> está el baño?</td>
+                        <td><span class="highlight">Where</span> is the bathroom?</td>
+                    </tr>
+                    <tr>
+                        <td>yo</td>
+                        <td>I</td>
+                        <td><span class="highlight">Yo</span> vivo en México.</td>
+                        <td><span class="highlight">I</span> live in Mexico.</td>
+                    </tr>
+                    <tr>
+                        <td>ir</td>
+                        <td>to go</td>
+                        <td>Quiero <span class="highlight">ir</span> a la playa.</td>
+                        <td>I want <span class="highlight">to go</span> to the beach.</td>
+                    </tr>
+                    <tr>
+                        <td>ver</td>
+                        <td>to see</td>
+                        <td>Quiero <span class="highlight">ver</span> la película.</td>
+                        <td>I want <span class="highlight">to see</span> the movie.</td>
+                    </tr>
+                    <tr>
+                        <td>porque</td>
+                        <td>because</td>
+                        <td>Estoy feliz <span class="highlight">porque</span> es viernes.</td>
+                        <td>I'm happy <span class="highlight">because</span> it's Friday.</td>
+                    </tr>
+                    <tr>
+                        <td>eso</td>
+                        <td>that</td>
+                        <td>¿Qué es <span class="highlight">eso</span>?</td>
+                        <td>What is <span class="highlight">that</span>?</td>
+                    </tr>
+                    <tr>
+                        <td>sí</td>
+                        <td>yes</td>
+                        <td><span class="highlight">Sí</span>, por favor.</td>
+                        <td><span class="highlight">Yes</span>, please.</td>
+                    </tr>
+                    <tr>
+                        <td>mi</td>
+                        <td>my</td>
+                        <td>Este es <span class="highlight">mi</span> coche.</td>
+                        <td>This is <span class="highlight">my</span> car.</td>
+                    </tr>
+                    <tr>
+                        <td>qué</td>
+                        <td>what</td>
+                        <td>¿<span class="highlight">Qué</span> quieres comer?</td>
+                        <td><span class="highlight">What</span> do you want to eat?</td>
+                    </tr>
+                    <tr>
+                        <td>solo</td>
+                        <td>only/alone</td>
+                        <td><span class="highlight">Solo</span> quiero agua.</td>
+                        <td>I <span class="highlight">only</span> want water.</td>
+                    </tr>
+                    <tr>
+                        <td>hasta</td>
+                        <td>until/even</td>
+                        <td>Trabajo <span class="highlight">hasta</span> las cinco.</td>
+                        <td>I work <span class="highlight">until</span> five.</td>
+                    </tr>
+                    <tr>
+                        <td>año</td>
+                        <td>year</td>
+                        <td>El próximo <span class="highlight">año</span> viajo.</td>
+                        <td>Next <span class="highlight">year</span> I travel.</td>
+                    </tr>
+                    <tr>
+                        <td>cómo</td>
+                        <td>how</td>
+                        <td>¿<span class="highlight">Cómo</span> estás?</td>
+                        <td><span class="highlight">How</span> are you?</td>
+                    </tr>
+                    <tr>
+                        <td>decir</td>
+                        <td>to say/to tell</td>
+                        <td>Quiero <span class="highlight">decir</span> algo.</td>
+                        <td>I want <span class="highlight">to say</span> something.</td>
+                    </tr>
+                    <tr>
+                        <td>tanto</td>
+                        <td>so much</td>
+                        <td>Te extraño <span class="highlight">tanto</span>.</td>
+                        <td>I miss you <span class="highlight">so much</span>.</td>
+                    </tr>
+                    <tr>
+                        <td>vida</td>
+                        <td>life</td>
+                        <td>La <span class="highlight">vida</span> es bella.</td>
+                        <td><span class="highlight">Life</span> is beautiful.</td>
+                    </tr>
+                    <tr>
+                        <td>otro</td>
+                        <td>other/another</td>
+                        <td>Dame <span class="highlight">otro</span> café.</td>
+                        <td>Give me <span class="highlight">another</span> coffee.</td>
+                    </tr>
+                    <tr>
+                        <td>vez</td>
+                        <td>time (occurrence)</td>
+                        <td>Una <span class="highlight">vez</span> más.</td>
+                        <td>One more <span class="highlight">time</span>.</td>
+                    </tr>
+                    <tr>
+                        <td>saber</td>
+                        <td>to know (facts)</td>
+                        <td>Quiero <span class="highlight">saber</span> la verdad.</td>
+                        <td>I want <span class="highlight">to know</span> the truth.</td>
+                    </tr>
+                    <tr>
+                        <td>nosotros</td>
+                        <td>we</td>
+                        <td><span class="highlight">Nosotros</span> somos familia.</td>
+                        <td><span class="highlight">We</span> are family.</td>
+                    </tr>
+                    <tr>
+                        <td>casa</td>
+                        <td>house/home</td>
+                        <td>Estoy en <span class="highlight">casa</span>.</td>
+                        <td>I'm at <span class="highlight">home</span>.</td>
+                    </tr>
+                    <tr>
+                        <td>mundo</td>
+                        <td>world</td>
+                        <td>Quiero viajar por el <span class="highlight">mundo</span>.</td>
+                        <td>I want to travel around the <span class="highlight">world</span>.</td>
+                    </tr>
+                    <tr>
+                        <td>dar</td>
+                        <td>to give</td>
+                        <td>Quiero <span class="highlight">dar</span> un regalo.</td>
+                        <td>I want <span class="highlight">to give</span> a gift.</td>
+                    </tr>
+                    <tr>
+                        <td>cosa</td>
+                        <td>thing</td>
+                        <td>Es una <span class="highlight">cosa</span> extraña.</td>
+                        <td>It's a strange <span class="highlight">thing</span>.</td>
+                    </tr>
+                    <tr>
+                        <td>nada</td>
+                        <td>nothing</td>
+                        <td>No quiero <span class="highlight">nada</span>.</td>
+                        <td>I don't want <span class="highlight">nothing</span>.</td>
+                    </tr>
+                    <tr>
+                        <td>hombre</td>
+                        <td>man</td>
+                        <td>Ese <span class="highlight">hombre</span> es mi padre.</td>
+                        <td>That <span class="highlight">man</span> is my father.</td>
+                    </tr>
+                    <tr>
+                        <td>mujer</td>
+                        <td>woman</td>
+                        <td>La <span class="highlight">mujer</span> es doctora.</td>
+                        <td>The <span class="highlight">woman</span> is a doctor.</td>
+                    </tr>
+                    <tr>
+                        <td>bueno</td>
+                        <td>good</td>
+                        <td>Es un <span class="highlight">buen</span> día.</td>
+                        <td>It's a <span class="highlight">good</span> day.</td>
+                    </tr>
+                    <tr>
+                        <td>grande</td>
+                        <td>big/great</td>
+                        <td>Una casa <span class="highlight">grande</span>.</td>
+                        <td>A <span class="highlight">big</span> house.</td>
+                    </tr>
+                    <tr>
+                        <td>allí</td>
+                        <td>there</td>
+                        <td>Está <span class="highlight">allí</span>.</td>
+                        <td>It's over <span class="highlight">there</span>.</td>
+                    </tr>
+                    <tr>
+                        <td>poco</td>
+                        <td>little/few</td>
+                        <td>Un <span class="highlight">poco</span> de azúcar.</td>
+                        <td>A <span class="highlight">little</span> sugar.</td>
+                    </tr>
+                    <tr>
+                        <td>gente</td>
+                        <td>people</td>
+                        <td>Hay mucha <span class="highlight">gente</span> aquí.</td>
+                        <td>There are many <span class="highlight">people</span> here.</td>
+                    </tr>
+                    <tr>
+                        <td>hoy</td>
+                        <td>today</td>
+                        <td><span class="highlight">Hoy</span> es lunes.</td>
+                        <td><span class="highlight">Today</span> is Monday.</td>
+                    </tr>
+                    <tr>
+                        <td>nuevo</td>
+                        <td>new</td>
+                        <td>Tengo un coche <span class="highlight">nuevo</span>.</td>
+                        <td>I have a <span class="highlight">new</span> car.</td>
+                    </tr>
+                    <tr>
+                        <td>gracias</td>
+                        <td>thank you</td>
+                        <td><span class="highlight">Gracias</span> por tu ayuda.</td>
+                        <td><span class="highlight">Thank you</span> for your help.</td>
+                    </tr>
+                    <tr>
+                        <td>mejor</td>
+                        <td>better/best</td>
+                        <td>Eres el <span class="highlight">mejor</span> amigo.</td>
+                        <td>You're the <span class="highlight">best</span> friend.</td>
+                    </tr>
+                    <tr>
+                        <td>siempre</td>
+                        <td>always</td>
+                        <td><span class="highlight">Siempre</span> estoy aquí.</td>
+                        <td>I'm <span class="highlight">always</span> here.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
