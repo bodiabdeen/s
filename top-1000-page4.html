@@ -1,0 +1,1478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 1000 Spanish Words - Page 4 (Words 701-900)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --terracotta: #C86B3C;
+            --golden: #F4A460;
+            --deep-blue: #1B4965;
+            --sky-blue: #62B6CB;
+            --cream: #FFF8F0;
+            --dark: #2C1810;
+            --accent-red: #D84A4A;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Source Sans 3', sans-serif;
+            background: linear-gradient(135deg, var(--cream) 0%, #FFE8D6 100%);
+            min-height: 100vh;
+            color: var(--dark);
+        }
+        
+        /* Sticky Header */
+        header {
+            background: linear-gradient(135deg, var(--deep-blue), var(--sky-blue));
+            padding: 30px 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            animation: slideDown 0.6s ease-out;
+        }
+        
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.8rem, 4vw, 3rem);
+            color: white;
+            font-weight: 900;
+            letter-spacing: -1px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 12px 28px;
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .nav-link:hover {
+            background: white;
+            color: var(--deep-blue);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Main Content */
+        .container {
+            max-width: 1400px;
+            margin: 40px auto;
+            padding: 0 20px 60px;
+        }
+        
+        .intro-box {
+            background: linear-gradient(135deg, var(--terracotta), var(--golden));
+            color: white;
+            padding: 40px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 40px rgba(200, 107, 60, 0.3);
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .intro-box h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.5rem, 3vw, 2.2rem);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .intro-box p {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            line-height: 1.7;
+        }
+        
+        /* Pagination */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease-out 0.3s both;
+        }
+        
+        .page-btn, .page-number {
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .page-btn {
+            background: linear-gradient(135deg, var(--terracotta), var(--golden));
+            color: white;
+            box-shadow: 0 4px 15px rgba(200, 107, 60, 0.3);
+        }
+        
+        .page-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(200, 107, 60, 0.4);
+        }
+        
+        .page-btn.disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+        
+        .page-btn.disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+        
+        .page-number {
+            background: white;
+            color: var(--dark);
+            border: 2px solid var(--golden);
+        }
+        
+        .page-number.active {
+            background: linear-gradient(135deg, var(--deep-blue), var(--sky-blue));
+            color: white;
+            border-color: var(--deep-blue);
+        }
+        
+        .page-number:hover:not(.active) {
+            background: var(--cream);
+            transform: translateY(-2px);
+        }
+        
+        /* Table Styles */
+        .table-container {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            overflow-x: auto;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+        
+        thead {
+            background: linear-gradient(135deg, var(--deep-blue), var(--sky-blue));
+            color: white;
+        }
+        
+        th {
+            padding: 20px 15px;
+            text-align: left;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            position: sticky;
+            top: 110px;
+            background: linear-gradient(135deg, var(--deep-blue), var(--sky-blue));
+            z-index: 10;
+        }
+        
+        th:first-child {
+            border-top-left-radius: 15px;
+        }
+        
+        th:last-child {
+            border-top-right-radius: 15px;
+        }
+        
+        tbody tr {
+            transition: all 0.3s ease;
+        }
+        
+        tbody tr:hover {
+            background: linear-gradient(90deg, #FFF8F0, #FFE8D6);
+            transform: scale(1.01);
+            box-shadow: 0 4px 15px rgba(200, 107, 60, 0.15);
+        }
+        
+        td {
+            padding: 18px 15px;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        
+        td:first-child {
+            font-weight: 700;
+            color: var(--deep-blue);
+            font-size: 1.1rem;
+        }
+        
+        td:nth-child(2) {
+            font-weight: 600;
+            color: var(--terracotta);
+            font-size: 1.1rem;
+        }
+        
+        .highlight {
+            background: linear-gradient(120deg, var(--golden) 0%, var(--golden) 100%);
+            background-size: 100% 40%;
+            background-repeat: no-repeat;
+            background-position: 0 85%;
+            padding: 2px 4px;
+            font-weight: 700;
+            color: var(--dark);
+        }
+        
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            th, td {
+                padding: 15px 12px;
+                font-size: 0.95rem;
+            }
+            
+            th {
+                font-size: 1.1rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                justify-content: center;
+                text-align: center;
+            }
+            
+            .nav-links {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .table-container {
+                padding: 15px;
+            }
+            
+            th, td {
+                padding: 12px 8px;
+                font-size: 0.9rem;
+            }
+            
+            th {
+                font-size: 1rem;
+                top: 180px;
+            }
+            
+            .intro-box {
+                padding: 25px;
+            }
+            
+            .pagination {
+                gap: 8px;
+            }
+            
+            .page-btn, .page-number {
+                padding: 10px 16px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Top 1000 Words - Page 4</h1>
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">🏠 Home</a>
+                <a href="top-100.html" class="nav-link">Top 100</a>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="intro-box">
+            <h2>📚 Words 701-900</h2>
+            <p>Almost there! These advanced words will elevate your Spanish to the next level!</p>
+        </div>
+        
+        <div class="pagination">
+            <a href="top-1000-page3.html" class="page-btn">← Previous</a>
+            <a href="top-1000-page1.html" class="page-number">1</a>
+            <a href="top-1000-page2.html" class="page-number">2</a>
+            <a href="top-1000-page3.html" class="page-number">3</a>
+            <a href="top-1000-page4.html" class="page-number active">4</a>
+            <a href="top-1000-page5.html" class="page-number">5</a>
+            <a href="top-1000-page5.html" class="page-btn">Next →</a>
+        </div>
+        
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Spanish</th>
+                        <th>English</th>
+                        <th>Spanish Example</th>
+                        <th>English Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>enojar</td>
+                        <td>to anger/to upset</td>
+                        <td>No quiero <span class="highlight">enojarte</span>.</td>
+                        <td>I don't want <span class="highlight">to upset</span> you.</td>
+                    </tr>
+                    <tr>
+                        <td>ofender</td>
+                        <td>to offend</td>
+                        <td>No quise <span class="highlight">ofenderte</span>.</td>
+                        <td>I didn't mean <span class="highlight">to offend</span> you.</td>
+                    </tr>
+                    <tr>
+                        <td>insultar</td>
+                        <td>to insult</td>
+                        <td>No me <span class="highlight">insultes</span>.</td>
+                        <td>Don't <span class="highlight">insult</span> me.</td>
+                    </tr>
+                    <tr>
+                        <td>disculpar</td>
+                        <td>to excuse/to forgive</td>
+                        <td><span class="highlight">Disculpa</span> mi error.</td>
+                        <td><span class="highlight">Excuse</span> my mistake.</td>
+                    </tr>
+                    <tr>
+                        <td>perdonar</td>
+                        <td>to forgive</td>
+                        <td><span class="highlight">Perdóname</span>, por favor.</td>
+                        <td><span class="highlight">Forgive</span> me, please.</td>
+                    </tr>
+                    <tr>
+                        <td>reconciliar</td>
+                        <td>to reconcile</td>
+                        <td>Quiero <span class="highlight">reconciliarme</span> contigo.</td>
+                        <td>I want <span class="highlight">to reconcile</span> with you.</td>
+                    </tr>
+                    <tr>
+                        <td>vengar</td>
+                        <td>to avenge</td>
+                        <td>Voy a <span class="highlight">vengarme</span>.</td>
+                        <td>I'm going <span class="highlight">to get revenge</span>.</td>
+                    </tr>
+                    <tr>
+                        <td>castigar</td>
+                        <td>to punish</td>
+                        <td>Van a <span class="highlight">castigarte</span>.</td>
+                        <td>They're going <span class="highlight">to punish</span> you.</td>
+                    </tr>
+                    <tr>
+                        <td>premiar</td>
+                        <td>to reward</td>
+                        <td>Van a <span class="highlight">premiarte</span>.</td>
+                        <td>They're going <span class="highlight">to reward</span> you.</td>
+                    </tr>
+                    <tr>
+                        <td>recompensar</td>
+                        <td>to reward/to compensate</td>
+                        <td>Te voy a <span class="highlight">recompensar</span>.</td>
+                        <td>I'm going <span class="highlight">to reward</span> you.</td>
+                    </tr>
+                    <tr>
+                        <td>compensar</td>
+                        <td>to compensate</td>
+                        <td>Voy a <span class="highlight">compensarte</span>.</td>
+                        <td>I'm going <span class="highlight">to compensate</span> you.</td>
+                    </tr>
+                    <tr>
+                        <td>indemnizar</td>
+                        <td>to indemnify</td>
+                        <td>Deben <span class="highlight">indemnizarte</span>.</td>
+                        <td>They should <span class="highlight">compensate</span> you.</td>
+                    </tr>
+                    <tr>
+                        <td>multar</td>
+                        <td>to fine</td>
+                        <td>Me van a <span class="highlight">multar</span>.</td>
+                        <td>They're going <span class="highlight">to fine</span> me.</td>
+                    </tr>
+                    <tr>
+                        <td>sancionar</td>
+                        <td>to sanction/to penalize</td>
+                        <td>Van a <span class="highlight">sancionar</span> a la empresa.</td>
+                        <td>They're going <span class="highlight">to sanction</span> the company.</td>
+                    </tr>
+                    <tr>
+                        <td>juzgar</td>
+                        <td>to judge</td>
+                        <td>No me <span class="highlight">juzgues</span>.</td>
+                        <td>Don't <span class="highlight">judge</span> me.</td>
+                    </tr>
+                    <tr>
+                        <td>condenar</td>
+                        <td>to condemn/to sentence</td>
+                        <td>Lo <span class="highlight">condenaron</span> a prisión.</td>
+                        <td>They <span class="highlight">sentenced</span> him to prison.</td>
+                    </tr>
+                    <tr>
+                        <td>absolver</td>
+                        <td>to absolve/to acquit</td>
+                        <td>El juez lo <span class="highlight">absolvió</span>.</td>
+                        <td>The judge <span class="highlight">acquitted</span> him.</td>
+                    </tr>
+                    <tr>
+                        <td>acusar</td>
+                        <td>to accuse</td>
+                        <td>Me <span class="highlight">acusan</span> injustamente.</td>
+                        <td>They <span class="highlight">accuse</span> me unjustly.</td>
+                    </tr>
+                    <tr>
+                        <td>culpar</td>
+                        <td>to blame</td>
+                        <td>No me <span class="highlight">culpes</span>.</td>
+                        <td>Don't <span class="highlight">blame</span> me.</td>
+                    </tr>
+                    <tr>
+                        <td>defender</td>
+                        <td>to defend</td>
+                        <td>Voy a <span class="highlight">defenderme</span>.</td>
+                        <td>I'm going <span class="highlight">to defend</span> myself.</td>
+                    </tr>
+                    <tr>
+                        <td>justificar</td>
+                        <td>to justify</td>
+                        <td>No puedo <span class="highlight">justificar</span> esto.</td>
+                        <td>I can't <span class="highlight">justify</span> this.</td>
+                    </tr>
+                    <tr>
+                        <td>demostrar</td>
+                        <td>to demonstrate/to prove</td>
+                        <td>Voy a <span class="highlight">demostrar</span> mi inocencia.</td>
+                        <td>I'm going <span class="highlight">to prove</span> my innocence.</td>
+                    </tr>
+                    <tr>
+                        <td>probar</td>
+                        <td>to prove/to test</td>
+                        <td>Puedo <span class="highlight">probar</span> que es cierto.</td>
+                        <td>I can <span class="highlight">prove</span> it's true.</td>
+                    </tr>
+                    <tr>
+                        <td>comprobar</td>
+                        <td>to verify/to check</td>
+                        <td>Voy a <span class="highlight">comprobar</span> los datos.</td>
+                        <td>I'm going <span class="highlight">to verify</span> the data.</td>
+                    </tr>
+                    <tr>
+                        <td>verificar</td>
+                        <td>to verify</td>
+                        <td>Necesito <span class="highlight">verificar</span> la información.</td>
+                        <td>I need <span class="highlight">to verify</span> the information.</td>
+                    </tr>
+                    <tr>
+                        <td>confirmar</td>
+                        <td>to confirm</td>
+                        <td>¿Puedes <span class="highlight">confirmar</span> tu asistencia?</td>
+                        <td>Can you <span class="highlight">confirm</span> your attendance?</td>
+                    </tr>
+                    <tr>
+                        <td>desmentir</td>
+                        <td>to deny/to refute</td>
+                        <td>Voy a <span class="highlight">desmentir</span> el rumor.</td>
+                        <td>I'm going <span class="highlight">to deny</span> the rumor.</td>
+                    </tr>
+                    <tr>
+                        <td>refutar</td>
+                        <td>to refute</td>
+                        <td>Puedo <span class="highlight">refutar</span> ese argumento.</td>
+                        <td>I can <span class="highlight">refute</span> that argument.</td>
+                    </tr>
+                    <tr>
+                        <td>contradecir</td>
+                        <td>to contradict</td>
+                        <td>No me <span class="highlight">contradigas</span>.</td>
+                        <td>Don't <span class="highlight">contradict</span> me.</td>
+                    </tr>
+                    <tr>
+                        <td>afirmar</td>
+                        <td>to affirm/to state</td>
+                        <td><span class="highlight">Afirmo</span> que es verdad.</td>
+                        <td>I <span class="highlight">state</span> that it's true.</td>
+                    </tr>
+                    <tr>
+                        <td>asegurar</td>
+                        <td>to assure/to ensure</td>
+                        <td>Te <span class="highlight">aseguro</span> que vendré.</td>
+                        <td>I <span class="highlight">assure</span> you I'll come.</td>
+                    </tr>
+                    <tr>
+                        <td>garantizar</td>
+                        <td>to guarantee</td>
+                        <td>Te <span class="highlight">garantizo</span> calidad.</td>
+                        <td>I <span class="highlight">guarantee</span> you quality.</td>
+                    </tr>
+                    <tr>
+                        <td>prometer</td>
+                        <td>to promise</td>
+                        <td>Te lo <span class="highlight">prometo</span>.</td>
+                        <td>I <span class="highlight">promise</span> you.</td>
+                    </tr>
+                    <tr>
+                        <td>cumplir</td>
+                        <td>to keep (a promise)</td>
+                        <td>Voy a <span class="highlight">cumplir</span> mi promesa.</td>
+                        <td>I'm going <span class="highlight">to keep</span> my promise.</td>
+                    </tr>
+                    <tr>
+                        <td>romper</td>
+                        <td>to break</td>
+                        <td><span class="highlight">Rompió</span> su promesa.</td>
+                        <td>He <span class="highlight">broke</span> his promise.</td>
+                    </tr>
+                    <tr>
+                        <td>quebrar</td>
+                        <td>to break</td>
+                        <td>Se <span class="highlight">quebró</span> el plato.</td>
+                        <td>The plate <span class="highlight">broke</span>.</td>
+                    </tr>
+                    <tr>
+                        <td>partir</td>
+                        <td>to split/to break</td>
+                        <td>Voy a <span class="highlight">partir</span> el pan.</td>
+                        <td>I'm going <span class="highlight">to split</span> the bread.</td>
+                    </tr>
+                    <tr>
+                        <td>rasgar</td>
+                        <td>to tear/to rip</td>
+                        <td>Se <span class="highlight">rasgó</span> el papel.</td>
+                        <td>The paper <span class="highlight">tore</span>.</td>
+                    </tr>
+                    <tr>
+                        <td>arrancar</td>
+                        <td>to pull out/to start</td>
+                        <td>Voy a <span class="highlight">arrancar</span> el coche.</td>
+                        <td>I'm going <span class="highlight">to start</span> the car.</td>
+                    </tr>
+                    <tr>
+                        <td>detener</td>
+                        <td>to stop</td>
+                        <td><span class="highlight">Detén</span> el coche.</td>
+                        <td><span class="highlight">Stop</span> the car.</td>
+                    </tr>
+                    <tr>
+                        <td>cesar</td>
+                        <td>to cease</td>
+                        <td>No <span class="highlight">cesa</span> de llover.</td>
+                        <td>It doesn't <span class="highlight">stop</span> raining.</td>
+                    </tr>
+                    <tr>
+                        <td>iniciar</td>
+                        <td>to initiate/to start</td>
+                        <td>Voy a <span class="highlight">iniciar</span> el proceso.</td>
+                        <td>I'm going <span class="highlight">to start</span> the process.</td>
+                    </tr>
+                    <tr>
+                        <td>comenzar</td>
+                        <td>to begin</td>
+                        <td>Vamos a <span class="highlight">comenzar</span>.</td>
+                        <td>Let's <span class="highlight">begin</span>.</td>
+                    </tr>
+                    <tr>
+                        <td>finalizar</td>
+                        <td>to finalize</td>
+                        <td>Voy a <span class="highlight">finalizar</span> el proyecto.</td>
+                        <td>I'm going <span class="highlight">to finalize</span> the project.</td>
+                    </tr>
+                    <tr>
+                        <td>concluir</td>
+                        <td>to conclude</td>
+                        <td>Voy a <span class="highlight">concluir</span> mi presentación.</td>
+                        <td>I'm going <span class="highlight">to conclude</span> my presentation.</td>
+                    </tr>
+                    <tr>
+                        <td>resumir</td>
+                        <td>to summarize</td>
+                        <td>Voy a <span class="highlight">resumir</span> el texto.</td>
+                        <td>I'm going <span class="highlight">to summarize</span> the text.</td>
+                    </tr>
+                    <tr>
+                        <td>sintetizar</td>
+                        <td>to synthesize</td>
+                        <td>Necesito <span class="highlight">sintetizar</span> la información.</td>
+                        <td>I need <span class="highlight">to synthesize</span> the information.</td>
+                    </tr>
+                    <tr>
+                        <td>ampliar</td>
+                        <td>to expand</td>
+                        <td>Voy a <span class="highlight">ampliar</span> la explicación.</td>
+                        <td>I'm going <span class="highlight">to expand</span> the explanation.</td>
+                    </tr>
+                    <tr>
+                        <td>extender</td>
+                        <td>to extend</td>
+                        <td>Voy a <span class="highlight">extender</span> el plazo.</td>
+                        <td>I'm going <span class="highlight">to extend</span> the deadline.</td>
+                    </tr>
+                    <tr>
+                        <td>prolongar</td>
+                        <td>to prolong</td>
+                        <td>Voy a <span class="highlight">prolongar</span> mi estadía.</td>
+                        <td>I'm going <span class="highlight">to prolong</span> my stay.</td>
+                    </tr>
+                    <tr>
+                        <td>acortar</td>
+                        <td>to shorten</td>
+                        <td>Voy a <span class="highlight">acortar</span> el vestido.</td>
+                        <td>I'm going <span class="highlight">to shorten</span> the dress.</td>
+                    </tr>
+                    <tr>
+                        <td>reducir</td>
+                        <td>to reduce</td>
+                        <td>Necesito <span class="highlight">reducir</span> gastos.</td>
+                        <td>I need <span class="highlight">to reduce</span> expenses.</td>
+                    </tr>
+                    <tr>
+                        <td>limitar</td>
+                        <td>to limit</td>
+                        <td>Debo <span class="highlight">limitar</span> el azúcar.</td>
+                        <td>I should <span class="highlight">limit</span> sugar.</td>
+                    </tr>
+                    <tr>
+                        <td>restringir</td>
+                        <td>to restrict</td>
+                        <td>Van a <span class="highlight">restringir</span> el acceso.</td>
+                        <td>They're going <span class="highlight">to restrict</span> access.</td>
+                    </tr>
+                    <tr>
+                        <td>facilitar</td>
+                        <td>to facilitate</td>
+                        <td>Voy a <span class="highlight">facilitar</span> el proceso.</td>
+                        <td>I'm going <span class="highlight">to facilitate</span> the process.</td>
+                    </tr>
+                    <tr>
+                        <td>dificultar</td>
+                        <td>to make difficult</td>
+                        <td>Esto <span class="highlight">dificulta</span> las cosas.</td>
+                        <td>This <span class="highlight">makes things difficult</span>.</td>
+                    </tr>
+                    <tr>
+                        <td>complicar</td>
+                        <td>to complicate</td>
+                        <td>No <span class="highlight">compliques</span> las cosas.</td>
+                        <td>Don't <span class="highlight">complicate</span> things.</td>
+                    </tr>
+                    <tr>
+                        <td>simplificar</td>
+                        <td>to simplify</td>
+                        <td>Voy a <span class="highlight">simplificar</span> el proceso.</td>
+                        <td>I'm going <span class="highlight">to simplify</span> the process.</td>
+                    </tr>
+                    <tr>
+                        <td>clarificar</td>
+                        <td>to clarify</td>
+                        <td>Necesito <span class="highlight">clarificar</span> esto.</td>
+                        <td>I need <span class="highlight">to clarify</span> this.</td>
+                    </tr>
+                    <tr>
+                        <td>aclarar</td>
+                        <td>to clarify</td>
+                        <td>Voy a <span class="highlight">aclarar</span> la situación.</td>
+                        <td>I'm going <span class="highlight">to clarify</span> the situation.</td>
+                    </tr>
+                    <tr>
+                        <td>confundir</td>
+                        <td>to confuse</td>
+                        <td>No me <span class="highlight">confundas</span>.</td>
+                        <td>Don't <span class="highlight">confuse</span> me.</td>
+                    </tr>
+                    <tr>
+                        <td>mezclar</td>
+                        <td>to mix</td>
+                        <td>No <span class="highlight">mezcles</span> los colores.</td>
+                        <td>Don't <span class="highlight">mix</span> the colors.</td>
+                    </tr>
+                    <tr>
+                        <td>combinar</td>
+                        <td>to combine</td>
+                        <td>Voy a <span class="highlight">combinar</span> los ingredientes.</td>
+                        <td>I'm going <span class="highlight">to combine</span> the ingredients.</td>
+                    </tr>
+                    <tr>
+                        <td>integrar</td>
+                        <td>to integrate</td>
+                        <td>Voy a <span class="highlight">integrar</span> el equipo.</td>
+                        <td>I'm going <span class="highlight">to integrate</span> the team.</td>
+                    </tr>
+                    <tr>
+                        <td>incorporar</td>
+                        <td>to incorporate</td>
+                        <td>Voy a <span class="highlight">incorporar</span> nuevas ideas.</td>
+                        <td>I'm going <span class="highlight">to incorporate</span> new ideas.</td>
+                    </tr>
+                    <tr>
+                        <td>añadir</td>
+                        <td>to add</td>
+                        <td>Voy a <span class="highlight">añadir</span> sal.</td>
+                        <td>I'm going <span class="highlight">to add</span> salt.</td>
+                    </tr>
+                    <tr>
+                        <td>agregar</td>
+                        <td>to add</td>
+                        <td><span class="highlight">Agrega</span> más azúcar.</td>
+                        <td><span class="highlight">Add</span> more sugar.</td>
+                    </tr>
+                    <tr>
+                        <td>sumar</td>
+                        <td>to add (math)</td>
+                        <td>Voy a <span class="highlight">sumar</span> los números.</td>
+                        <td>I'm going <span class="highlight">to add</span> the numbers.</td>
+                    </tr>
+                    <tr>
+                        <td>restar</td>
+                        <td>to subtract</td>
+                        <td>Voy a <span class="highlight">restar</span> los gastos.</td>
+                        <td>I'm going <span class="highlight">to subtract</span> the expenses.</td>
+                    </tr>
+                    <tr>
+                        <td>multiplicar</td>
+                        <td>to multiply</td>
+                        <td>Voy a <span class="highlight">multiplicar</span> por dos.</td>
+                        <td>I'm going <span class="highlight">to multiply</span> by two.</td>
+                    </tr>
+                    <tr>
+                        <td>dividir</td>
+                        <td>to divide</td>
+                        <td>Voy a <span class="highlight">dividir</span> entre tres.</td>
+                        <td>I'm going <span class="highlight">to divide</span> by three.</td>
+                    </tr>
+                    <tr>
+                        <td>comparar</td>
+                        <td>to compare</td>
+                        <td>Voy a <span class="highlight">comparar</span> los precios.</td>
+                        <td>I'm going <span class="highlight">to compare</span> the prices.</td>
+                    </tr>
+                    <tr>
+                        <td>contrastar</td>
+                        <td>to contrast</td>
+                        <td>Voy a <span class="highlight">contrastar</span> las opiniones.</td>
+                        <td>I'm going <span class="highlight">to contrast</span> the opinions.</td>
+                    </tr>
+                    <tr>
+                        <td>diferenciar</td>
+                        <td>to differentiate</td>
+                        <td>No puedo <span class="highlight">diferenciarlos</span>.</td>
+                        <td>I can't <span class="highlight">differentiate</span> them.</td>
+                    </tr>
+                    <tr>
+                        <td>distinguir</td>
+                        <td>to distinguish</td>
+                        <td>Puedo <span class="highlight">distinguir</span> la diferencia.</td>
+                        <td>I can <span class="highlight">distinguish</span> the difference.</td>
+                    </tr>
+                    <tr>
+                        <td>igualar</td>
+                        <td>to equal/to match</td>
+                        <td>Nadie puede <span class="highlight">igualarlo</span>.</td>
+                        <td>No one can <span class="highlight">match</span> him.</td>
+                    </tr>
+                    <tr>
+                        <td>superar</td>
+                        <td>to overcome/to surpass</td>
+                        <td>Voy a <span class="highlight">superar</span> este obstáculo.</td>
+                        <td>I'm going <span class="highlight">to overcome</span> this obstacle.</td>
+                    </tr>
+                    <tr>
+                        <td>exceder</td>
+                        <td>to exceed</td>
+                        <td>No <span class="highlight">excedas</span> el límite.</td>
+                        <td>Don't <span class="highlight">exceed</span> the limit.</td>
+                    </tr>
+                    <tr>
+                        <td>sobrepasar</td>
+                        <td>to surpass</td>
+                        <td><span class="highlight">Sobrepasó</span> mis expectativas.</td>
+                        <td>It <span class="highlight">surpassed</span> my expectations.</td>
+                    </tr>
+                    <tr>
+                        <td>rebasar</td>
+                        <td>to exceed/to overtake</td>
+                        <td>Voy a <span class="highlight">rebasar</span> ese coche.</td>
+                        <td>I'm going <span class="highlight">to overtake</span> that car.</td>
+                    </tr>
+                    <tr>
+                        <td>adelantar</td>
+                        <td>to overtake/to advance</td>
+                        <td>Voy a <span class="highlight">adelantar</span> al camión.</td>
+                        <td>I'm going <span class="highlight">to overtake</span> the truck.</td>
+                    </tr>
+                    <tr>
+                        <td>preceder</td>
+                        <td>to precede</td>
+                        <td>La A <span class="highlight">precede</span> a la B.</td>
+                        <td>A <span class="highlight">precedes</span> B.</td>
+                    </tr>
+                    <tr>
+                        <td>suceder</td>
+                        <td>to happen/to succeed</td>
+                        <td>¿Qué <span class="highlight">sucedió</span>?</td>
+                        <td>What <span class="highlight">happened</span>?</td>
+                    </tr>
+                    <tr>
+                        <td>ocurrir</td>
+                        <td>to occur</td>
+                        <td>¿Qué <span class="highlight">ocurrió</span> aquí?</td>
+                        <td>What <span class="highlight">occurred</span> here?</td>
+                    </tr>
+                    <tr>
+                        <td>acontecer</td>
+                        <td>to happen</td>
+                        <td>¿Qué <span class="highlight">aconteció</span>?</td>
+                        <td>What <span class="highlight">happened</span>?</td>
+                    </tr>
+                    <tr>
+                        <td>transcurrir</td>
+                        <td>to pass (time)</td>
+                        <td>El tiempo <span class="highlight">transcurre</span> rápido.</td>
+                        <td>Time <span class="highlight">passes</span> quickly.</td>
+                    </tr>
+                    <tr>
+                        <td>pasar</td>
+                        <td>to pass</td>
+                        <td>El tiempo <span class="highlight">pasa</span> volando.</td>
+                        <td>Time <span class="highlight">flies</span>.</td>
+                    </tr>
+                    <tr>
+                        <td>durar</td>
+                        <td>to last</td>
+                        <td>¿Cuánto va a <span class="highlight">durar</span>?</td>
+                        <td>How long will it <span class="highlight">last</span>?</td>
+                    </tr>
+                    <tr>
+                        <td>perdurar</td>
+                        <td>to endure/to last</td>
+                        <td>Su legado <span class="highlight">perdura</span>.</td>
+                        <td>His legacy <span class="highlight">endures</span>.</td>
+                    </tr>
+                    <tr>
+                        <td>persistir</td>
+                        <td>to persist</td>
+                        <td>Debes <span class="highlight">persistir</span>.</td>
+                        <td>You must <span class="highlight">persist</span>.</td>
+                    </tr>
+                    <tr>
+                        <td>insistir</td>
+                        <td>to insist</td>
+                        <td><span class="highlight">Insisto</span> en que vengas.</td>
+                        <td>I <span class="highlight">insist</span> you come.</td>
+                    </tr>
+                    <tr>
+                        <td>desistir</td>
+                        <td>to desist/to give up</td>
+                        <td>No voy a <span class="highlight">desistir</span>.</td>
+                        <td>I'm not going <span class="highlight">to give up</span>.</td>
+                    </tr>
+                    <tr>
+                        <td>renunciar</td>
+                        <td>to give up/to resign</td>
+                        <td>Nunca voy a <span class="highlight">renunciar</span>.</td>
+                        <td>I'm never going <span class="highlight">to give up</span>.</td>
+                    </tr>
+                    <tr>
+                        <td>abandonar</td>
+                        <td>to abandon</td>
+                        <td>No voy a <span class="highlight">abandonar</span>te.</td>
+                        <td>I'm not going <span class="highlight">to abandon</span> you.</td>
+                    </tr>
+                    <tr>
+                        <td>desistir</td>
+                        <td>to desist</td>
+                        <td>No voy a <span class="highlight">desistir</span>.</td>
+                        <td>I won't <span class="highlight">desist</span>.</td>
+                    </tr>
+                    <tr>
+                        <td>ceder</td>
+                        <td>to yield/to give in</td>
+                        <td>No voy a <span class="highlight">ceder</span>.</td>
+                        <td>I won't <span class="highlight">give in</span>.</td>
+                    </tr>
+                    <tr>
+                        <td>rendirse</td>
+                        <td>to surrender/to give up</td>
+                        <td>Nunca me voy a <span class="highlight">rendir</span>.</td>
+                        <td>I'll never <span class="highlight">give up</span>.</td>
+                    </tr>
+                    <tr>
+                        <td>claudicar</td>
+                        <td>to give up/to yield</td>
+                        <td>No voy a <span class="highlight">claudicar</span>.</td>
+                        <td>I won't <span class="highlight">yield</span>.</td>
+                    </tr>
+                    <tr>
+                        <td>perseverar</td>
+                        <td>to persevere</td>
+                        <td>Debes <span class="highlight">perseverar</span>.</td>
+                        <td>You must <span class="highlight">persevere</span>.</td>
+                    </tr>
+                    <tr>
+                        <td>continuar</td>
+                        <td>to continue</td>
+                        <td>Voy a <span class="highlight">continuar</span> intentando.</td>
+                        <td>I'm going <span class="highlight">to keep</span> trying.</td>
+                    </tr>
+                    <tr>
+                        <td>proseguir</td>
+                        <td>to continue/to proceed</td>
+                        <td>Voy a <span class="highlight">proseguir</span> con el plan.</td>
+                        <td>I'm going <span class="highlight">to proceed</span> with the plan.</td>
+                    </tr>
+                    <tr>
+                        <td>proceder</td>
+                        <td>to proceed</td>
+                        <td>Voy a <span class="highlight">proceder</span> con cuidado.</td>
+                        <td>I'm going <span class="highlight">to proceed</span> carefully.</td>
+                    </tr>
+                    <tr>
+                        <td>avanzar</td>
+                        <td>to advance</td>
+                        <td>Vamos a <span class="highlight">avanzar</span>.</td>
+                        <td>Let's <span class="highlight">advance</span>.</td>
+                    </tr>
+                    <tr>
+                        <td>progresar</td>
+                        <td>to progress</td>
+                        <td>Estamos <span class="highlight">progresando</span>.</td>
+                        <td>We're <span class="highlight">progressing</span>.</td>
+                    </tr>
+                    <tr>
+                        <td>mejorar</td>
+                        <td>to improve</td>
+                        <td>Quiero <span class="highlight">mejorar</span> mi español.</td>
+                        <td>I want <span class="highlight">to improve</span> my Spanish.</td>
+                    </tr>
+                    <tr>
+                        <td>perfeccionar</td>
+                        <td>to perfect</td>
+                        <td>Voy a <span class="highlight">perfeccionar</span> mi técnica.</td>
+                        <td>I'm going <span class="highlight">to perfect</span> my technique.</td>
+                    </tr>
+                    <tr>
+                        <td>refinar</td>
+                        <td>to refine</td>
+                        <td>Necesito <span class="highlight">refinar</span> los detalles.</td>
+                        <td>I need <span class="highlight">to refine</span> the details.</td>
+                    </tr>
+                    <tr>
+                        <td>pulir</td>
+                        <td>to polish</td>
+                        <td>Voy a <span class="highlight">pulir</span> el texto.</td>
+                        <td>I'm going <span class="highlight">to polish</span> the text.</td>
+                    </tr>
+                    <tr>
+                        <td>lustrar</td>
+                        <td>to shine/to polish</td>
+                        <td>Voy a <span class="highlight">lustrar</span> los zapatos.</td>
+                        <td>I'm going <span class="highlight">to polish</span> the shoes.</td>
+                    </tr>
+                    <tr>
+                        <td>brillar</td>
+                        <td>to shine</td>
+                        <td>Las estrellas <span class="highlight">brillan</span>.</td>
+                        <td>The stars <span class="highlight">shine</span>.</td>
+                    </tr>
+                    <tr>
+                        <td>resplandecer</td>
+                        <td>to shine/to gleam</td>
+                        <td>El sol <span class="highlight">resplandece</span>.</td>
+                        <td>The sun <span class="highlight">shines</span>.</td>
+                    </tr>
+                    <tr>
+                        <td>iluminar</td>
+                        <td>to illuminate</td>
+                        <td>La luna <span class="highlight">ilumina</span> la noche.</td>
+                        <td>The moon <span class="highlight">illuminates</span> the night.</td>
+                    </tr>
+                    <tr>
+                        <td>alumbrar</td>
+                        <td>to light up</td>
+                        <td>Las velas <span class="highlight">alumbran</span> la sala.</td>
+                        <td>Candles <span class="highlight">light up</span> the room.</td>
+                    </tr>
+                    <tr>
+                        <td>oscurecer</td>
+                        <td>to darken</td>
+                        <td>El cielo se está <span class="highlight">oscureciendo</span>.</td>
+                        <td>The sky is <span class="highlight">darkening</span>.</td>
+                    </tr>
+                    <tr>
+                        <td>aclarar</td>
+                        <td>to lighten/to clear up</td>
+                        <td>El cielo se está <span class="highlight">aclarando</span>.</td>
+                        <td>The sky is <span class="highlight">clearing up</span>.</td>
+                    </tr>
+                    <tr>
+                        <td>nublar</td>
+                        <td>to cloud</td>
+                        <td>Se está <span class="highlight">nublando</span>.</td>
+                        <td>It's <span class="highlight">clouding over</span>.</td>
+                    </tr>
+                    <tr>
+                        <td>llover</td>
+                        <td>to rain</td>
+                        <td>Está <span class="highlight">lloviendo</span>.</td>
+                        <td>It's <span class="highlight">raining</span>.</td>
+                    </tr>
+                    <tr>
+                        <td>nevar</td>
+                        <td>to snow</td>
+                        <td>Está <span class="highlight">nevando</span>.</td>
+                        <td>It's <span class="highlight">snowing</span>.</td>
+                    </tr>
+                    <tr>
+                        <td>granizar</td>
+                        <td>to hail</td>
+                        <td>Está <span class="highlight">granizando</span>.</td>
+                        <td>It's <span class="highlight">hailing</span>.</td>
+                    </tr>
+                    <tr>
+                        <td>tronar</td>
+                        <td>to thunder</td>
+                        <td>Está <span class="highlight">tronando</span>.</td>
+                        <td>It's <span class="highlight">thundering</span>.</td>
+                    </tr>
+                    <tr>
+                        <td>relampaguear</td>
+                        <td>to flash lightning</td>
+                        <td>Está <span class="highlight">relampagueando</span>.</td>
+                        <td>There's <span class="highlight">lightning</span>.</td>
+                    </tr>
+                    <tr>
+                        <td>soplar</td>
+                        <td>to blow (wind)</td>
+                        <td>El viento <span class="highlight">sopla</span> fuerte.</td>
+                        <td>The wind <span class="highlight">blows</span> hard.</td>
+                    </tr>
+                    <tr>
+                        <td>ventear</td>
+                        <td>to be windy</td>
+                        <td>Está <span class="highlight">venteando</span> mucho.</td>
+                        <td>It's very <span class="highlight">windy</span>.</td>
+                    </tr>
+                    <tr>
+                        <td>helar</td>
+                        <td>to freeze</td>
+                        <td>Está <span class="highlight">helando</span> afuera.</td>
+                        <td>It's <span class="highlight">freezing</span> outside.</td>
+                    </tr>
+                    <tr>
+                        <td>deshelar</td>
+                        <td>to thaw/to defrost</td>
+                        <td>Voy a <span class="highlight">deshelar</span> la carne.</td>
+                        <td>I'm going <span class="highlight">to defrost</span> the meat.</td>
+                    </tr>
+                    <tr>
+                        <td>calentar</td>
+                        <td>to heat</td>
+                        <td>Voy a <span class="highlight">calentar</span> la comida.</td>
+                        <td>I'm going <span class="highlight">to heat</span> the food.</td>
+                    </tr>
+                    <tr>
+                        <td>enfriar</td>
+                        <td>to cool</td>
+                        <td>Necesito <span class="highlight">enfriar</span> la bebida.</td>
+                        <td>I need <span class="highlight">to cool</span> the drink.</td>
+                    </tr>
+                    <tr>
+                        <td>secar</td>
+                        <td>to dry</td>
+                        <td>Voy a <span class="highlight">secar</span> la ropa.</td>
+                        <td>I'm going <span class="highlight">to dry</span> the clothes.</td>
+                    </tr>
+                    <tr>
+                        <td>mojar</td>
+                        <td>to wet</td>
+                        <td>No <span class="highlight">mojes</span> el piso.</td>
+                        <td>Don't <span class="highlight">wet</span> the floor.</td>
+                    </tr>
+                    <tr>
+                        <td>humedecer</td>
+                        <td>to moisten</td>
+                        <td>Voy a <span class="highlight">humedecer</span> la tierra.</td>
+                        <td>I'm going <span class="highlight">to moisten</span> the soil.</td>
+                    </tr>
+                    <tr>
+                        <td>empapar</td>
+                        <td>to soak</td>
+                        <td>La lluvia me <span class="highlight">empapó</span>.</td>
+                        <td>The rain <span class="highlight">soaked</span> me.</td>
+                    </tr>
+                    <tr>
+                        <td>sumergir</td>
+                        <td>to submerge</td>
+                        <td>Voy a <span class="highlight">sumergir</span> el objeto.</td>
+                        <td>I'm going <span class="highlight">to submerge</span> the object.</td>
+                    </tr>
+                    <tr>
+                        <td>emerger</td>
+                        <td>to emerge</td>
+                        <td>El submarino <span class="highlight">emergió</span>.</td>
+                        <td>The submarine <span class="highlight">emerged</span>.</td>
+                    </tr>
+                    <tr>
+                        <td>surgir</td>
+                        <td>to arise/to emerge</td>
+                        <td><span class="highlight">Surgió</span> un problema.</td>
+                        <td>A problem <span class="highlight">arose</span>.</td>
+                    </tr>
+                    <tr>
+                        <td>aparecer</td>
+                        <td>to appear</td>
+                        <td>De repente <span class="highlight">apareció</span>.</td>
+                        <td>Suddenly he <span class="highlight">appeared</span>.</td>
+                    </tr>
+                    <tr>
+                        <td>desaparecer</td>
+                        <td>to disappear</td>
+                        <td>El dinero <span class="highlight">desapareció</span>.</td>
+                        <td>The money <span class="highlight">disappeared</span>.</td>
+                    </tr>
+                    <tr>
+                        <td>esfumarse</td>
+                        <td>to vanish</td>
+                        <td>Se <span class="highlight">esfumó</span> sin dejar rastro.</td>
+                        <td>He <span class="highlight">vanished</span> without a trace.</td>
+                    </tr>
+                    <tr>
+                        <td>manifestarse</td>
+                        <td>to manifest</td>
+                        <td>Los síntomas se <span class="highlight">manifestaron</span>.</td>
+                        <td>The symptoms <span class="highlight">manifested</span>.</td>
+                    </tr>
+                    <tr>
+                        <td>revelar</td>
+                        <td>to reveal</td>
+                        <td>Voy a <span class="highlight">revelar</span> el secreto.</td>
+                        <td>I'm going <span class="highlight">to reveal</span> the secret.</td>
+                    </tr>
+                    <tr>
+                        <td>develar</td>
+                        <td>to unveil</td>
+                        <td>Van a <span class="highlight">develar</span> la estatua.</td>
+                        <td>They're going <span class="highlight">to unveil</span> the statue.</td>
+                    </tr>
+                    <tr>
+                        <td>mostrar</td>
+                        <td>to show</td>
+                        <td><span class="highlight">Muéstrame</span> tu trabajo.</td>
+                        <td><span class="highlight">Show</span> me your work.</td>
+                    </tr>
+                    <tr>
+                        <td>exhibir</td>
+                        <td>to exhibit</td>
+                        <td>Van a <span class="highlight">exhibir</span> las pinturas.</td>
+                        <td>They're going <span class="highlight">to exhibit</span> the paintings.</td>
+                    </tr>
+                    <tr>
+                        <td>exponer</td>
+                        <td>to expose/to exhibit</td>
+                        <td>Voy a <span class="highlight">exponer</span> mi trabajo.</td>
+                        <td>I'm going <span class="highlight">to exhibit</span> my work.</td>
+                    </tr>
+                    <tr>
+                        <td>presentar</td>
+                        <td>to present</td>
+                        <td>Voy a <span class="highlight">presentar</span> mi proyecto.</td>
+                        <td>I'm going <span class="highlight">to present</span> my project.</td>
+                    </tr>
+                    <tr>
+                        <td>representar</td>
+                        <td>to represent</td>
+                        <td>Este símbolo <span class="highlight">representa</span> la paz.</td>
+                        <td>This symbol <span class="highlight">represents</span> peace.</td>
+                    </tr>
+                    <tr>
+                        <td>simbolizar</td>
+                        <td>to symbolize</td>
+                        <td>La paloma <span class="highlight">simboliza</span> la paz.</td>
+                        <td>The dove <span class="highlight">symbolizes</span> peace.</td>
+                    </tr>
+                    <tr>
+                        <td>significar</td>
+                        <td>to mean/to signify</td>
+                        <td>¿Qué <span class="highlight">significa</span> esto?</td>
+                        <td>What does this <span class="highlight">mean</span>?</td>
+                    </tr>
+                    <tr>
+                        <td>indicar</td>
+                        <td>to indicate</td>
+                        <td>La flecha <span class="highlight">indica</span> la dirección.</td>
+                        <td>The arrow <span class="highlight">indicates</span> the direction.</td>
+                    </tr>
+                    <tr>
+                        <td>señalar</td>
+                        <td>to point out/to signal</td>
+                        <td>Voy a <span class="highlight">señalar</span> los errores.</td>
+                        <td>I'm going <span class="highlight">to point out</span> the errors.</td>
+                    </tr>
+                    <tr>
+                        <td>apuntar</td>
+                        <td>to point/to aim</td>
+                        <td>No <span class="highlight">apuntes</span> con el dedo.</td>
+                        <td>Don't <span class="highlight">point</span> with your finger.</td>
+                    </tr>
+                    <tr>
+                        <td>orientar</td>
+                        <td>to orient/to guide</td>
+                        <td>¿Puedes <span class="highlight">orientarme</span>?</td>
+                        <td>Can you <span class="highlight">guide</span> me?</td>
+                    </tr>
+                    <tr>
+                        <td>guiar</td>
+                        <td>to guide</td>
+                        <td>Voy a <span class="highlight">guiarte</span>.</td>
+                        <td>I'm going <span class="highlight">to guide</span> you.</td>
+                    </tr>
+                    <tr>
+                        <td>conducir</td>
+                        <td>to lead/to conduct</td>
+                        <td>Este camino <span class="highlight">conduce</span> al pueblo.</td>
+                        <td>This path <span class="highlight">leads</span> to town.</td>
+                    </tr>
+                    <tr>
+                        <td>liderar</td>
+                        <td>to lead</td>
+                        <td>Él <span class="highlight">lidera</span> el equipo.</td>
+                        <td>He <span class="highlight">leads</span> the team.</td>
+                    </tr>
+                    <tr>
+                        <td>dirigir</td>
+                        <td>to direct/to lead</td>
+                        <td>Ella <span class="highlight">dirige</span> la empresa.</td>
+                        <td>She <span class="highlight">directs</span> the company.</td>
+                    </tr>
+                    <tr>
+                        <td>administrar</td>
+                        <td>to manage/to administer</td>
+                        <td>Voy a <span class="highlight">administrar</span> el negocio.</td>
+                        <td>I'm going <span class="highlight">to manage</span> the business.</td>
+                    </tr>
+                    <tr>
+                        <td>gestionar</td>
+                        <td>to manage</td>
+                        <td>Necesito <span class="highlight">gestionar</span> mejor mi tiempo.</td>
+                        <td>I need <span class="highlight">to manage</span> my time better.</td>
+                    </tr>
+                    <tr>
+                        <td>organizar</td>
+                        <td>to organize</td>
+                        <td>Voy a <span class="highlight">organizar</span> una reunión.</td>
+                        <td>I'm going <span class="highlight">to organize</span> a meeting.</td>
+                    </tr>
+                    <tr>
+                        <td>coordinar</td>
+                        <td>to coordinate</td>
+                        <td>Voy a <span class="highlight">coordinar</span> el evento.</td>
+                        <td>I'm going <span class="highlight">to coordinate</span> the event.</td>
+                    </tr>
+                    <tr>
+                        <td>supervisar</td>
+                        <td>to supervise</td>
+                        <td>Voy a <span class="highlight">supervisar</span> el trabajo.</td>
+                        <td>I'm going <span class="highlight">to supervise</span> the work.</td>
+                    </tr>
+                    <tr>
+                        <td>vigilar</td>
+                        <td>to watch/to guard</td>
+                        <td>Voy a <span class="highlight">vigilar</span> la casa.</td>
+                        <td>I'm going <span class="highlight">to watch</span> the house.</td>
+                    </tr>
+                    <tr>
+                        <td>custodiar</td>
+                        <td>to guard</td>
+                        <td>Van a <span class="highlight">custodiar</span> el tesoro.</td>
+                        <td>They're going <span class="highlight">to guard</span> the treasure.</td>
+                    </tr>
+                    <tr>
+                        <td>cuidar</td>
+                        <td>to take care of</td>
+                        <td>Voy a <span class="highlight">cuidar</span> al bebé.</td>
+                        <td>I'm going <span class="highlight">to take care of</span> the baby.</td>
+                    </tr>
+                    <tr>
+                        <td>proteger</td>
+                        <td>to protect</td>
+                        <td>Voy a <span class="highlight">protegerte</span>.</td>
+                        <td>I'm going <span class="highlight">to protect</span> you.</td>
+                    </tr>
+                    <tr>
+                        <td>resguardar</td>
+                        <td>to protect/to shelter</td>
+                        <td>Voy a <span class="highlight">resguardar</span> los documentos.</td>
+                        <td>I'm going <span class="highlight">to protect</span> the documents.</td>
+                    </tr>
+                    <tr>
+                        <td>amparar</td>
+                        <td>to shelter/to protect</td>
+                        <td>La ley los <span class="highlight">ampara</span>.</td>
+                        <td>The law <span class="highlight">protects</span> them.</td>
+                    </tr>
+                    <tr>
+                        <td>refugiar</td>
+                        <td>to shelter/to take refuge</td>
+                        <td>Se <span class="highlight">refugiaron</span> en la cueva.</td>
+                        <td>They <span class="highlight">took refuge</span> in the cave.</td>
+                    </tr>
+                    <tr>
+                        <td>cobijar</td>
+                        <td>to shelter</td>
+                        <td>Voy a <span class="highlight">cobijarme</span> de la lluvia.</td>
+                        <td>I'm going <span class="highlight">to take shelter</span> from the rain.</td>
+                    </tr>
+                    <tr>
+                        <td>albergar</td>
+                        <td>to house/to shelter</td>
+                        <td>El hotel <span class="highlight">alberga</span> 200 huéspedes.</td>
+                        <td>The hotel <span class="highlight">houses</span> 200 guests.</td>
+                    </tr>
+                    <tr>
+                        <td>alojar</td>
+                        <td>to lodge/to accommodate</td>
+                        <td>Voy a <span class="highlight">alojarme</span> en un hotel.</td>
+                        <td>I'm going <span class="highlight">to stay</span> at a hotel.</td>
+                    </tr>
+                    <tr>
+                        <td>hospedar</td>
+                        <td>to host/to accommodate</td>
+                        <td>Voy a <span class="highlight">hospedar</span> a mis amigos.</td>
+                        <td>I'm going <span class="highlight">to host</span> my friends.</td>
+                    </tr>
+                    <tr>
+                        <td>acoger</td>
+                        <td>to welcome/to shelter</td>
+                        <td>La familia me <span class="highlight">acogió</span>.</td>
+                        <td>The family <span class="highlight">welcomed</span> me.</td>
+                    </tr>
+                    <tr>
+                        <td>recibir</td>
+                        <td>to receive</td>
+                        <td><span class="highlight">Recibí</span> un regalo.</td>
+                        <td>I <span class="highlight">received</span> a gift.</td>
+                    </tr>
+                    <tr>
+                        <td>aceptar</td>
+                        <td>to accept</td>
+                        <td><span class="highlight">Acepto</span> tu disculpa.</td>
+                        <td>I <span class="highlight">accept</span> your apology.</td>
+                    </tr>
+                    <tr>
+                        <td>rechazar</td>
+                        <td>to reject</td>
+                        <td><span class="highlight">Rechazó</span> la oferta.</td>
+                        <td>He <span class="highlight">rejected</span> the offer.</td>
+                    </tr>
+                    <tr>
+                        <td>declinar</td>
+                        <td>to decline</td>
+                        <td>Tuve que <span class="highlight">declinar</span> la invitación.</td>
+                        <td>I had <span class="highlight">to decline</span> the invitation.</td>
+                    </tr>
+                    <tr>
+                        <td>negar</td>
+                        <td>to deny</td>
+                        <td><span class="highlight">Niega</span> las acusaciones.</td>
+                        <td>He <span class="highlight">denies</span> the accusations.</td>
+                    </tr>
+                    <tr>
+                        <td>afirmar</td>
+                        <td>to affirm</td>
+                        <td><span class="highlight">Afirma</span> que es inocente.</td>
+                        <td>He <span class="highlight">affirms</span> he's innocent.</td>
+                    </tr>
+                    <tr>
+                        <td>sostener</td>
+                        <td>to hold/to maintain</td>
+                        <td><span class="highlight">Sostiene</span> que es verdad.</td>
+                        <td>He <span class="highlight">maintains</span> it's true.</td>
+                    </tr>
+                    <tr>
+                        <td>mantener</td>
+                        <td>to maintain</td>
+                        <td>Voy a <span class="highlight">mantener</span> mi palabra.</td>
+                        <td>I'm going <span class="highlight">to keep</span> my word.</td>
+                    </tr>
+                    <tr>
+                        <td>conservar</td>
+                        <td>to preserve/to keep</td>
+                        <td>Voy a <span class="highlight">conservar</span> este recuerdo.</td>
+                        <td>I'm going <span class="highlight">to keep</span> this memory.</td>
+                    </tr>
+                    <tr>
+                        <td>preservar</td>
+                        <td>to preserve</td>
+                        <td>Debemos <span class="highlight">preservar</span> el medio ambiente.</td>
+                        <td>We must <span class="highlight">preserve</span> the environment.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="pagination">
+            <a href="top-1000-page3.html" class="page-btn">← Previous</a>
+            <a href="top-1000-page1.html" class="page-number">1</a>
+            <a href="top-1000-page2.html" class="page-number">2</a>
+            <a href="top-1000-page3.html" class="page-number">3</a>
+            <a href="top-1000-page4.html" class="page-number active">4</a>
+            <a href="top-1000-page5.html" class="page-number">5</a>
+            <a href="top-1000-page5.html" class="page-btn">Next →</a>
+        </div>
+    </div>
+</body>
+</html>
