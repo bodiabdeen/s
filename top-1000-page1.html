@@ -318,7 +318,8 @@
             
             th {
                 font-size: 1rem;
-                top: 180px;
+                position: relative !important;
+                top: auto !important;
             }
             
             .intro-box {
@@ -332,6 +333,13 @@
             .page-btn, .page-number {
                 padding: 10px 16px;
                 font-size: 0.9rem;
+            }
+        }
+            /* Mobile table fix */
+        @media (max-width: 768px) {
+            thead th {
+                position: relative !important;
+                top: 0 !important;
             }
         }
     </style>
